@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+<title>Get Up!</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript">
+
+let previousimg = [];
+
+let random_images_array = ['jump-split.gif', 'jump-squat.gif', 'jump-squat2.gif', 'jump-twist-squat.gif', 'plank-arm-leg.gif', 'plank-twist.gif', 'plank-walk.gif', 'plank-walk-2.gif', 'plank-wiggle.gif', 'pushup.gif', 'pushup-jump.gif', 'sideplank-legrise.gif', 'sideplank-hiprise.gif', 'sideplank-twist.gif', 'skip-lunge.gif', 'squat.gif', 'squat-side-kick.gif', 'standing-buttkick.gif', 'standing-elbow-hip.gif', 'standing-lunge.gif', 'sumosquat-jam.gif', 'superman.gif', 'twist-back-lunge.gif', 'twist-back-lunge-2.gif', 'v-ups.gif', 'walkout-plank.gif', 'arm-leg-lift.gif', 'arm-leg-lift-full.gif', 'burpees.gif', 'clam.gif', 'elbow-knee.gif', 'hip-thrust.gif', 'jump-lunge.gif',];
+
+let random_text_array = ['20  per leg', 'jump-squat.gif', 'jump-squat2.gif', 'jump-twist-squat.gif', 'plank-arm-leg.gif', 'plank-twist.gif', 'plank-walk.gif', 'plank-walk-2.gif', 'plank-wiggle.gif', 'pushup.gif', 'pushup-jump.gif', 'sideplank-legrise.gif', 'sideplank-hiprise.gif', 'sideplank-twist.gif', 'skip-lunge.gif', 'squat.gif', 'squat-side-kick.gif', 'standing-buttkick.gif', 'standing-elbow-hip.gif', 'standing-lunge.gif', 'sumosquat-jam.gif', 'superman.gif', 'twist-back-lunge.gif', 'twist-back-lunge-2.gif', 'v-ups.gif', 'walkout-plank.gif', 'arm-leg-lift.gif', 'arm-leg-lift-full.gif', 'burpees.gif', 'clam.gif', 'elbow-knee.gif', 'hip-thrust.gif', 'jump-lunge.gif',];
+    
+function getRandomImage() {
+
+    let imgAr = random_images_array;
+    let path;
+    console.log(previousimg);
+    path = path || 'images/';
+    let i = Math.floor( Math.random() * imgAr.length );
+    
+    let img = imgAr[ i ];
+    let unused = (false === previousimg.includes(img))
+    
+    if (unused){
+        previousimg.push(img);
+        let imgTag = document.getElementById("gifstyle");
+        imgTag.src = path + img;
+        let pTag = document.getElementById("text");
+        pTag.textContent = random_text_array[i];
+    }
+    else {
+        getRandomImage(imgAr, path)
+    }
+    
+}
+
+
+
+</script>
+</head>
+
+<body>
+    <div id="container">
+
+      <!--   <div class="nav">
+        <!--     <label for="toggle">&#9776;</label> -->
+           <!--  <input type="checkbox" id="toggle">
+            <div class="menu">
+                <a href="#">Hem</a>
+                <a href="#">Build a full workout</a>
+                <a href="#">I have a workout buddy</a>   
+            </div>
+        </div> -->
+ 
+<h1>GET UP!</h1>
+
+<!-- <h1 class="vertical-text">GET UP!</h1> -->
+
+<div id="workout-block">
+    <p id="text"></p>
+    <img src="" id="gifstyle"/>
+    <!-- show img from array -->
+    <script type="text/javascript">getRandomImage()</script>
+
+</div>
+
+<div>
+
+    <button onclick="javascript:getRandomImage()"> Next exercise </button>
+
+</div>
+
+<h2>Reload the page to get a new exersice</h2>
+
+<div id="buddy"></div>
+
+</div>
+
+
+</body>
+</html>
