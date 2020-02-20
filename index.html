@@ -15,7 +15,7 @@ let previousimg = [];
 
 let random_images_array = ['jump-split.gif', 'jump-squat.gif', 'jump-squat2.gif', 'jump-twist-squat.gif', 'plank-arm-leg.gif', 'plank-twist.gif', 'plank-walk.gif', 'plank-walk-2.gif', 'plank-wiggle.gif', 'pushup.gif', 'pushup-jump.gif', 'sideplank-legrise.gif', 'sideplank-hiprise.gif', 'sideplank-twist.gif', 'skip-lunge.gif', 'squat.gif', 'squat-side-kick.gif', 'standing-buttkick.gif', 'standing-elbow-hip.gif', 'standing-lunge.gif', 'sumosquat-jam.gif', 'superman.gif', 'twist-back-lunge.gif', 'twist-back-lunge-2.gif', 'v-ups.gif', 'walkout-plank.gif', 'arm-leg-lift.gif', 'arm-leg-lift-full.gif', 'burpees.gif', 'clam.gif', 'elbow-knee.gif', 'hip-thrust.gif', 'jump-lunge.gif',];
 
-let random_text_array = ['20  per leg', 'jump-squat.gif', 'jump-squat2.gif', 'jump-twist-squat.gif', 'plank-arm-leg.gif', 'plank-twist.gif', 'plank-walk.gif', 'plank-walk-2.gif', 'plank-wiggle.gif', 'pushup.gif', 'pushup-jump.gif', 'sideplank-legrise.gif', 'sideplank-hiprise.gif', 'sideplank-twist.gif', 'skip-lunge.gif', 'squat.gif', 'squat-side-kick.gif', 'standing-buttkick.gif', 'standing-elbow-hip.gif', 'standing-lunge.gif', 'sumosquat-jam.gif', 'superman.gif', 'twist-back-lunge.gif', 'twist-back-lunge-2.gif', 'v-ups.gif', 'walkout-plank.gif', 'arm-leg-lift.gif', 'arm-leg-lift-full.gif', 'burpees.gif', 'clam.gif', 'elbow-knee.gif', 'hip-thrust.gif', 'jump-lunge.gif',];
+let random_text_array = ['REPEAT 10 TIMES', 'REPEAT 15 TIMES', 'REPEAT 15 TIMES', 'REPEAT 10 TIMES', 'REPEAT 15 TIMES', 'REPEAT 15 TIMES', 'REPEAT 20 TIMES', 'REPEAT 20 TIMES', 'DO FOR 1 MINUTE', 'REPEAT AS MANY YOU CAN', 'REPEAT 10 TIMES', 'REPEAT 10 ON EACH LEG', 'REPEAT 10 PER SIDE', 'REPEAT 10 PER SIDE', 'REPEAT 10 TIMES', 'REPEAT 20 TIMES', 'REPEAT 15 TIMES', 'REPEAT 25 TIMES', 'REPEAT 10 PER SIDE', 'REPEAT 10 ON EACH LEG', 'REPEAT 10 TIMES', 'REPEAT 15 TIMES', 'REPEAT 10 ON EACH LEG', 'REPEAT 10 TIMES', 'REPEAT 10 TIMES', 'REPEAT 10 TIMES', 'REPEAT 20 PER SIDE', 'REPEAT 20 PER SIDE', 'REPEAT 10 TIMES', 'REPEAT 15 ON EACH LEG', 'REPEAT 10 PER SIDE', 'REPEAT 20 TIMES', 'REPEAT 10 TIMES',];
     
 function getRandomImage() {
 
@@ -64,7 +64,7 @@ function getRandomImage() {
 <!-- <h1 class="vertical-text">GET UP!</h1> -->
 
 <div id="workout-block">
-    <p id="text"></p>
+    <p class="workouttext" id="text"></p>
     <img src="" id="gifstyle"/>
     <!-- show img from array -->
     <script type="text/javascript">getRandomImage()</script>
@@ -76,10 +76,27 @@ function getRandomImage() {
     <button onclick="javascript:getRandomImage()" class="nextbtn"> NEW EXERCISE </button>
   <!--  <a onclick="javascript:getRandomImage()" class="button3">Button</a> -->
 </div>
+    <!-- <h2>Reload the page to get a new exersice</h2> -->
 
-<!-- <h2>Reload the page to get a new exersice</h2>
 
-<div id="buddy"></div> -->
+<div class="createworkout">
+
+    <h2>CREATE WORKOUT:</h2>
+    <ul>
+        
+        <li>Pick eight exercises</li>
+        <li>Set a timer on 7 minutes</li>
+        <li>Perform as many you can of four exercises <br> in circuit 1 for seven minutes without rest</li>
+        <li>Take 30 - 90 second break</li>
+        <li>Then perform the other four excersices <br> in circuit 2 for seven minutes </li>
+        <li>Take 30 - 90 second break</li>
+        <li>Repeat both circuits one more time</li>
+        <li>Don't forget to have access to water </li>        
+      </ul>  
+   
+</div>
+
+<!-- <div id="buddy"></div> -->
 
 </div>
 
